@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Sign In View Controller" customClass="SignInViewController" customModule="SecretMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0of-GM-9Yi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="SecretMessenger" id="Izp-mP-FqK"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-icon" translatesAutoresizingMaskIntoConstraints="NO" id="BgW-QK-P0y">
+                                <rect key="frame" x="158" y="136" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6aB-Je-6hG"/>
+                                    <constraint firstAttribute="height" constant="60" id="ekI-3g-3WA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2S-OV-qlo">
+                                <rect key="frame" x="68" y="256" width="240" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5x2-Xa-IJY"/>
+                                    <constraint firstAttribute="height" constant="52" id="oG3-2i-h3J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="btn-facebook-sign-in"/>
+                                <connections>
+                                    <action selector="btnSignInFaceBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wjV-z2-Uel"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-rX-0EL">
+                                <rect key="frame" x="68" y="323" width="240" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="gtX-O3-X8t"/>
+                                    <constraint firstAttribute="height" constant="52" id="s96-AX-yPN"/>
+                                </constraints>
+                                <state key="normal" image="btn-google-sign-in"/>
+                                <connections>
+                                    <action selector="btnSignInGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1m-fj-04J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R2S-OV-qlo" firstAttribute="top" secondItem="BgW-QK-P0y" secondAttribute="bottom" constant="60" id="3zJ-C3-5Bx"/>
+                            <constraint firstItem="Fwr-rX-0EL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="68" id="42n-dF-3yY"/>
+                            <constraint firstItem="R2S-OV-qlo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="68" id="5y8-qb-ybS"/>
+                            <constraint firstItem="0of-GM-9Yi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tbd-Tv-GUI"/>
+                            <constraint firstItem="0of-GM-9Yi" firstAttribute="centerX" secondItem="BgW-QK-P0y" secondAttribute="centerX" id="Wg2-ez-Co4"/>
+                            <constraint firstItem="BgW-QK-P0y" firstAttribute="top" secondItem="0of-GM-9Yi" secondAttribute="bottom" constant="72" id="cSa-xj-bey"/>
+                            <constraint firstItem="BgW-QK-P0y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="158" id="jl1-iM-CiH"/>
+                            <constraint firstItem="0of-GM-9Yi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rZq-79-Ntp"/>
+                            <constraint firstItem="Fwr-rX-0EL" firstAttribute="top" secondItem="R2S-OV-qlo" secondAttribute="bottom" constant="15" id="rz2-ac-9FJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_btnFacebook" destination="R2S-OV-qlo" id="az2-jj-AfO"/>
+                        <outlet property="_btnGoogle" destination="Fwr-rX-0EL" id="fAT-OV-UH0"/>
+                        <outlet property="_navigationBar" destination="0of-GM-9Yi" id="gVr-Jk-3yN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Viết Tin Nhắn-->
+        <scene sceneID="NLb-ox-D2r">
+            <objects>
+                <viewController id="t6A-a4-Uvs" customClass="ComposeViewController" customModule="SecretMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7PU-ld-kSy"/>
+                        <viewControllerLayoutGuide type="bottom" id="vNJ-Pj-qGk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RfX-l4-X24">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Viết tin nhắn" image="img-compose-tab" selectedImage="img-compose-tab-selected" id="bbf-eX-HIT"/>
+                    <navigationItem key="navigationItem" title="Viết Tin Nhắn" id="TC8-nd-dQF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19G-YV-78N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="373"/>
+        </scene>
+        <!--Hộp Thư-->
+        <scene sceneID="cCZ-KB-feC">
+            <objects>
+                <viewController id="PQv-jP-qcR" customClass="InboxViewController" customModule="SecretMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sCP-20-d5p"/>
+                        <viewControllerLayoutGuide type="bottom" id="lUu-CO-c5q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Y0-Bb-muo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hộp Thư" image="img-inbox-tab" selectedImage="img-inbox-tab-selected" id="qNC-OY-k6m"/>
+                    <navigationItem key="navigationItem" title="Hộp Thư" id="JZG-9C-vLL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epd-1Q-jhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="1" sectionFooterHeight="1" id="fiw-XA-9IR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
+                    <prototypes>
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCellIdentifier" id="Gsw-FV-kub" customClass="MessageCell" customModule="SecretMessenger" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="1" width="375" height="84"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gsw-FV-kub" id="9pF-Bh-hX5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-Rx-vPR">
+                                        <rect key="frame" x="7" y="12" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="4Wc-Af-SpB"/>
+                                            <constraint firstAttribute="height" constant="60" id="NKo-BV-JyQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LF-TW-hIO">
+                                        <rect key="frame" x="74" y="12" width="294" height="18"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n3-g8-bI0">
+                                        <rect key="frame" x="74" y="33" width="294" height="18"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-GD-YaK">
+                                        <rect key="frame" x="74" y="56" width="294" height="16"/>
+                                        <string key="text">Message
+Message</string>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="13"/>
+                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4LF-TW-hIO" firstAttribute="leading" secondItem="1PY-Rx-vPR" secondAttribute="trailing" constant="7" id="0Mt-9I-s3q"/>
+                                    <constraint firstItem="1PY-Rx-vPR" firstAttribute="leading" secondItem="9pF-Bh-hX5" secondAttribute="leading" constant="7" id="2eT-Q2-RIM"/>
+                                    <constraint firstItem="5n3-g8-bI0" firstAttribute="top" secondItem="4LF-TW-hIO" secondAttribute="bottom" constant="3" id="5pd-tI-jdz"/>
+                                    <constraint firstItem="4LF-TW-hIO" firstAttribute="top" secondItem="9pF-Bh-hX5" secondAttribute="top" constant="12" id="BQj-RG-1mW"/>
+                                    <constraint firstItem="1PY-Rx-vPR" firstAttribute="top" secondItem="9pF-Bh-hX5" secondAttribute="top" constant="12" id="CNe-u4-5zh"/>
+                                    <constraint firstAttribute="trailing" secondItem="5n3-g8-bI0" secondAttribute="trailing" constant="7" id="Da6-Dn-yQI"/>
+                                    <constraint firstItem="gBN-GD-YaK" firstAttribute="leading" secondItem="1PY-Rx-vPR" secondAttribute="trailing" constant="7" id="GGo-Nj-4sC"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBN-GD-YaK" secondAttribute="trailing" constant="7" id="cgL-mi-i9V"/>
+                                    <constraint firstItem="5n3-g8-bI0" firstAttribute="leading" secondItem="1PY-Rx-vPR" secondAttribute="trailing" constant="7" id="dQe-n4-3xZ"/>
+                                    <constraint firstItem="gBN-GD-YaK" firstAttribute="top" secondItem="5n3-g8-bI0" secondAttribute="bottom" constant="5" id="h5i-5P-Dlb"/>
+                                    <constraint firstAttribute="trailing" secondItem="4LF-TW-hIO" secondAttribute="trailing" constant="7" id="ytZ-Ic-JPW"/>
+                                </constraints>
+                            </tableViewCellContentView>
+                            <connections>
+                                <outlet property="_imgProfilePhoto" destination="1PY-Rx-vPR" id="iKc-m4-5wp"/>
+                                <outlet property="_lblDisplayName" destination="4LF-TW-hIO" id="5lM-Q4-RcC"/>
+                                <outlet property="_lblMessage" destination="gBN-GD-YaK" id="QfO-91-sDx"/>
+                                <outlet property="_lblTitle" destination="5n3-g8-bI0" id="1ln-td-XkM"/>
+                            </connections>
+                        </tableViewCell>
+                    </prototypes>
+                </tableView>
+            </objects>
+            <point key="canvasLocation" x="2684" y="-289.20539730134936"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="JMZ-Xv-HHN">
+            <objects>
+                <tabBarController id="GWy-qp-bzm" customClass="MainTabBarViewController" customModule="SecretMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="q7G-hv-IRr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0PF-q2-cQc" kind="relationship" relationship="viewControllers" id="WTH-Vp-5nP"/>
+                        <segue destination="9As-xn-0Yo" kind="relationship" relationship="viewControllers" id="JyV-Xd-hZp"/>
+                        <segue destination="1Hh-3h-OQc" kind="relationship" relationship="viewControllers" id="DQe-UC-fhT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQ0-Xb-0uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="37"/>
+        </scene>
+        <!--Hộp Thư-->
+        <scene sceneID="DVb-7c-glY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0PF-q2-cQc" userLabel="Hộp Thư" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hộp thư" image="img-inbox-tab" selectedImage="img-inbox-tab-selected" id="PLs-ui-wjS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e6g-i6-pZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PQv-jP-qcR" kind="relationship" relationship="rootViewController" id="Rcu-rc-GTP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZmV-p8-qEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.8" y="-289.20539730134936"/>
+        </scene>
+        <!--Tài Khoản-->
+        <scene sceneID="g5e-Re-kEe">
+            <objects>
+                <viewController id="6i8-XI-HrO" customClass="AccountViewController" customModule="SecretMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tir-8E-s0k"/>
+                        <viewControllerLayoutGuide type="bottom" id="GH7-7D-IEY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="emi-hH-jqY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2e-H3-m17">
+                                <rect key="frame" x="87" y="274" width="200" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Ba2-Ne-LfE"/>
+                                    <constraint firstAttribute="width" constant="200" id="S4Y-cF-9kc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-BQ-Wrg">
+                                <rect key="frame" x="132" y="150" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="810-ko-tFS"/>
+                                    <constraint firstAttribute="height" constant="110" id="uhc-Iu-DKT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQe-4t-jqY">
+                                <rect key="frame" x="140" y="320" width="94" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="dlD-vY-SRh"/>
+                                    <constraint firstAttribute="width" constant="94" id="kE9-eZ-Oaa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                <state key="normal" title="Logout" backgroundImage="btn-sign-out-bg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dxa-BQ-Wrg" firstAttribute="top" secondItem="tir-8E-s0k" secondAttribute="bottom" constant="86" id="6z4-Sw-vXk"/>
+                            <constraint firstItem="XQe-4t-jqY" firstAttribute="leading" secondItem="emi-hH-jqY" secondAttribute="leading" constant="140" id="BAb-w2-rjD"/>
+                            <constraint firstItem="dxa-BQ-Wrg" firstAttribute="leading" secondItem="emi-hH-jqY" secondAttribute="leading" constant="132" id="Fmz-hz-8zh"/>
+                            <constraint firstItem="N2e-H3-m17" firstAttribute="top" secondItem="dxa-BQ-Wrg" secondAttribute="bottom" constant="14" id="TND-De-pPO"/>
+                            <constraint firstItem="XQe-4t-jqY" firstAttribute="top" secondItem="N2e-H3-m17" secondAttribute="bottom" constant="28" id="UIH-qg-G1c"/>
+                            <constraint firstItem="N2e-H3-m17" firstAttribute="leading" secondItem="emi-hH-jqY" secondAttribute="leading" constant="87" id="Yfd-5y-21G"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tài Khoản" image="img-account-tab" selectedImage="img-account-tab-selected" id="527-R9-FTe"/>
+                    <navigationItem key="navigationItem" title="Tài Khoản" id="olX-GD-G18"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZT-ZA-krg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="1100"/>
+        </scene>
+        <!--Viết tin nhắn-->
+        <scene sceneID="tJH-ER-TE5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9As-xn-0Yo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Viết tin nhắn" image="img-compose-tab" selectedImage="img-compose-tab-selected" id="Cq1-0x-wgd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GVH-lR-Ozo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t6A-a4-Uvs" kind="relationship" relationship="rootViewController" id="Okl-ke-V89"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAr-8d-zlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="373"/>
+        </scene>
+        <!--Tài khoản-->
+        <scene sceneID="EVa-H1-t9N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Hh-3h-OQc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tài khoản" image="img-account-tab" selectedImage="img-account-tab-selected" id="R31-TC-hLH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pml-OR-jwX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6i8-XI-HrO" kind="relationship" relationship="rootViewController" id="Mpu-S4-zOU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyl-NZ-PC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="1100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn-facebook-sign-in" width="240" height="52"/>
+        <image name="btn-google-sign-in" width="240" height="52"/>
+        <image name="btn-sign-out-bg" width="94" height="29"/>
+        <image name="img-account-tab" width="25" height="25"/>
+        <image name="img-account-tab-selected" width="25" height="25"/>
+        <image name="img-compose-tab" width="25" height="25"/>
+        <image name="img-compose-tab-selected" width="25" height="25"/>
+        <image name="img-icon" width="60" height="60"/>
+        <image name="img-inbox-tab" width="25" height="25"/>
+        <image name="img-inbox-tab-selected" width="25" height="25"/>
+    </resources>
+</document>
